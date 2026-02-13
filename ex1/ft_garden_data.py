@@ -1,8 +1,12 @@
 class Plant:
-    def __init__(self, name: str, height: int, age: int) -> None:
+    def __init__(self: type, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
+
+    def get_info(self: type):
+        print(self.name, ": ", self.height, "cm, ", self.age,
+                                            " days old", sep="")
 
 
 if __name__ == "__main__":
@@ -10,8 +14,6 @@ if __name__ == "__main__":
     rose = Plant("Rose", 25, 30)
     sunflower = Plant("Sunflower", 80, 45)
     cactus = Plant("Cactus", 15, 120)
-    print(rose.name, ": ", rose.height, "cm, ", rose.age, " days old", sep="")
-    print(sunflower.name, ": ", sunflower.height, "cm, ", sunflower.age,
-          " days old", sep="")
-    print(cactus.name, ": ", cactus.height, "cm, ", cactus.age, " days old",
-                                                                sep="")
+    rose.get_info()
+    sunflower.get_info()
+    cactus.get_info()
