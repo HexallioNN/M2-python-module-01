@@ -1,10 +1,10 @@
 class Plant:
-    def __init__(self: type, name: str, height: int, age: int) -> None:
+    def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
 
-    def get_info(self: type):
+    def get_info(self):
         print(self.name, ": ", self.height, "cm, ", self.age,
                                             " days old", sep="")
 

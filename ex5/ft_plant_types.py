@@ -1,59 +1,59 @@
 class Plant:
-    def __init__(self: type, name: str, height: int, age: int) -> None:
+    def __init__(self, name: str, height: int, age: int) -> None:
         self.name = name
         self.height = height
         self.age = age
 
-    def grow(self: type):
+    def grow(self):
         self.height = self.height + 1
 
-    def age_method(self: type):
+    def age_method(self):
         self.age = self.age + 1
 
-    def get_info(self: type):
+    def get_info(self):
         print(self.height, "cm, ", self.age,
               " days,", sep="", end=" ")
 
 
 class Flower(Plant):
-    def __init__(self: type, name: str, height: int, age: int,
+    def __init__(self, name: str, height: int, age: int,
                  color: str) -> None:
         super().__init__(name, height, age)
         self.color = color
 
-    def get_info(self: type):
+    def get_info(self):
         print(self.name, "(Flower):", end=" ")
         super().get_info()
         print(self.color, "color")
 
-    def bloom(self: type):
+    def bloom(self):
         print(self.name, "is blooming beautifully!")
 
 
 class Tree(Plant):
-    def __init__(self: type, name: str, height: int, age: int,
+    def __init__(self, name: str, height: int, age: int,
                  trunk_diameter: int) -> None:
         super().__init__(name, height, age)
         self.trunk_diameter = trunk_diameter
 
-    def get_info(self: type):
+    def get_info(self):
         print(self.name, "(Tree):", end=" ")
         super().get_info()
         print(self.trunk_diameter, "cm diameter", sep="")
 
-    def produce_shade(self: type):
+    def produce_shade(self):
         print(self.name, "provides", int(self.trunk_diameter / 0.64),
               "square meters of shade")
 
 
 class Vegetable(Plant):
-    def __init__(self: type, name: str, height: int, age: int,
+    def __init__(self, name: str, height: int, age: int,
                  harvest_season: str, nutrition_value: str) -> None:
         super().__init__(name, height, age)
         self.nutrition = nutrition_value
         self.harvest = harvest_season
 
-    def get_info(self: type):
+    def get_info(self):
         print(self.name, "(Vegetable):", end=" ")
         super().get_info()
         print(self.harvest, " harvest", sep="")
